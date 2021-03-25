@@ -39,3 +39,6 @@ class USBCamera(Camera):
             return image_resized
         else:
             raise RuntimeError('Could not read image from camera')
+            
+    def close(self):
+        self.cap.release()
